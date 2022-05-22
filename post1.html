@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Mission Step
+    </title>
+    <meta charset="utf-8">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="timestop.js"></script>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+            .cntnt {
+                border-collapse: collapse;
+                border-spacing: 0;
+                width: 100%;
+                border: 1px solid rgb(0, 0, 0);
+                background-color: rgb(151, 204, 247);
+                padding: 0px 15px;
+            }
+
+            .btcnt{
+                display: flex;
+                justify-content: center;
+                align-items: center; 
+            }
+
+            #bt1 {
+                background-color: rgb(0, 14, 54); 
+                border: none; 
+                color:white; 
+                padding: 15px 30px; 
+                text-align:center; 
+                font-size: 16px; 
+                margin: 4px 4px; 
+                cursor: pointer;
+            }
+            .center{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 100%;
+            }
+
+            #button1 {
+                background-color: rgb(133, 165, 255); 
+                border: none; 
+                color:rgb(0, 0, 0); 
+                padding: 10px 20px; 
+                text-align:center; 
+                font-size: 15px; 
+                margin: 4px 4px; 
+                cursor: pointer;
+            }
+
+        </style>
+
+        <h1 style="font-family: 'jua', sans-serif; text-align: center;">무인 포스트는 어디있을까?</h1>
+    </head>
+    <body>
+       
+        <div class="cntnt">
+            <h2 style="font-family: 'jua', sans-serif; text-align: center;">무인 포스트로 가기 위한 첫번째 여정!<br>도대체 어디서 부품을 구매할 수 있을까?</h2><br><br><br>
+
+            <p style="font-family: 'jua', sans-serif; text-align: center;font-size: 25px;"> 달빛이 깊은 어느날 밤!<br>팀원들과 함께 고된 야근을 마치고 혼자 집에 돌아가는 장그래.<br>해외 사정이 어려워 부품수급이 어려워지자 모두들 힘겨운 나날을 보내는 중이다.<br>뭔가 대책이 있으면 좋겠지만.. <br>아직 신입인 장그래는 해결할 방법이 없다.<br> "아 어떻게 하면 될까?"</p><br>
+            <p style="font-family: 'jua', sans-serif; text-align: center;font-size: 25px;"> 그 때, 맞은편에서 한 노인이 술에 취해 걸어오고 있었다.<br>그걸 본 장그래가 노인을 피해 멀찍이 지나가려 걸음을 옮기던 그때.<br>노인이 갑자기 장그래를 향해 소리쳤다.<br><br>이 문제의 답을 따라가게!<br>원래 당이 떨어지면 사람이 정신을 못차리는 법!<br><br>취한 노인이 전하려는 답은 무엇이었을까?</p>
+            <br>
+            <p style="font-family: 'jua', sans-serif; text-align: center;font-size: 25px;"> 그림에 해당하는 답을 입력하시오.<br></p><br><br>
+            <img src="q1.png" class="center">
+        </div>
+        <br>
+
+        <form name="myForm" onsubmit="return validateForm()" method="GET" style="font-family: 'jua', sans-serif; font-size: 30px; text-align: center;">
+            정답: <input type="text" name="fname" style="font-family: 'jua', sans-serif; font-size: 30px; width: 200px; height: 50px; margin-bottom: 0;">
+            <input type="submit" value="확인!" style="font-family: 'jua', sans-serif; font-size: 30px; width: 100px; height:55px; margin-bottom: 0px;">
+
+        <script>
+            function validateForm() {
+              var x = document.forms["myForm"]["fname"].value;
+              if (x == "") {
+                alert("내용이 입력되지 않았습니다.");
+                return false;
+              }
+              if (x=="candy"){
+                  alert("노인 : 정답일세. 아주 영민한 친구구만. 화면의 힌트를 참조하게");
+                  document.getElementById("dd").style.display ="block";
+                  document.getElementById("mimage").style.display ="block";                      
+                  return false;
+             }
+              if (x=="CANDY"){
+                  alert("노인 : 정답일세. 아주 영민한 친구구만. 화면의 힌트를 참조하게");
+                  document.getElementById("dd").style.display ="block";
+                  document.getElementById("mimage").style.display ="block";                      
+                  return false;
+              }else{
+                  alert("노인 : 땡! 틀렸다네!");
+                  return false;
+              }
+            }
+        </script>
+    </p>
+    <p id="dd" style="display: none;">부품 구매처를 알고싶다면<br>아래 힌트 사진을 따라가게나!
+    <br>이곳에 숨겨진 큐알 코드가 있다고 들었다네.<br>
+    <br>저기 숨어있는 큐알 코드를 스캔한뒤 암호로 "HMG구매본부"라고 입력하게.<br>대소문자 구분에 유의하게나. 행운을 비네.</p>
+    <img id ="mimage" src="2.jpg" style="width: 100%; display: none;" class="center">
+
+        
+    </body>
