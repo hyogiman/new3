@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <title>
+        Mission Step
+    </title>
+    <meta charset="utf-8">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="timestop.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Jua&family=Single+Day&display=swap');
+
+        .cntnt {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
+        border: 1px solid rgb(2, 73, 32);
+        background-color: rgb(155, 245, 152);
+        padding: 0px 15px;
+        }
+
+        .btcnt{
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+        }
+
+        #bt1 {
+            background-color: rgb(0, 14, 54); 
+            border: none; 
+            color:white; 
+            padding: 15px 30px; 
+            text-align:center; 
+            font-size: 16px; 
+            margin: 4px 4px; 
+            cursor: pointer;
+        }
+        .center{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+
+    </style>
+
+    <script>
+
+        function name_1() {
+            var c_name = document.getElementById("nm2").value;
+            var JD_1 = document.getElementById("tp2").value;
+
+
+            if (c_name == "") {
+                alert("팀 번호를 입력해 주셔야 합니다.");
+                return false;
+            }
+            if (JD_1 == "") {
+                alert("정답을 입력해 주셔야 합니다.");
+                return false;
+            }
+            if(JD_1 == "SMSP") {
+                if(c_name=="1"){
+                    alert(c_name+"팀 정답입니다. :)");
+                    window.location.href ="correct page1.html";
+                }
+                if(c_name=="2"){
+                    alert(c_name+"팀 정답입니다. :)");
+                    window.location.href ="success page2.html";
+                }
+                if(c_name=="3"){
+                    alert(c_name+"팀 정답입니다. :)");
+                    window.location.href ="crt 3page.html";
+                }
+                if(c_name=="4"){
+                    alert(c_name+"팀 정답입니다. :)");
+                    window.location.href ="trc 4page.html";
+                }
+                if(c_name=="5"){
+                    alert(c_name+"팀 정답입니다. :)");
+                    window.location.href ="JD 5page.html";
+                }
+                if(c_name>="6"){
+                    alert("그런 팀은 없습니다.");
+                }                               
+            }else{
+                alert("땡! 틀렸습니다.");
+                return false;
+
+            }
+        }
+    </script>
+    </head>
+    <body>  
+        <div class="cntnt">
+            <h1 style="font-family: 'jua', sans-serif; text-align: center;">구매본부 신입사원 미션트레킹<br>무인 미션 Post 2</h1>
+
+            <p style="width:auto; word-break: keep-all; font-size: 25px; font-family: 'Single Day', cursive;">
+                구매본부인의 덕목 중 갑질예방에 관한 1분 이내 홍보영상을 찍어 담당자에게 전송한다.<br>
+                [유의사항]<br>
+                1) 촬영하는 1인 외 모든 사람이 영상에 등장할 것.<br>
+                2) 직장 내 갑질예방이 아닌 완성차 회사와 협력사 간 갑질예방 영상일 것.<br>
+                3) 이미 제출한 다른 팀과 같은 스토리일 경우 탈락 및 재촬영 요구<br>
+                   (창의적인 스토리텔링 필요)<br>
+            </p>
+            <img src="12.jpg" class="center">
+            <p style="text-align: center; width:auto; word-break: keep-all; font-size: 25px; font-family: 'Single Day', cursive;">
+                (함께 전송해야 할 문구 : __팀 2번 무인 포스트 미션 영상입니다.)<br>
+            </p>
+        </div>
+
+    </body>
+</html>
